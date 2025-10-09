@@ -1,2 +1,2 @@
 # abap
-Repository for ERP course at DHBW
+Repository for the ABAP developement course at DHBW
