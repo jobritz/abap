@@ -17,7 +17,7 @@ CLASS zjb_cl_car DEFINITION
   PRIVATE SECTION.
     DATA mv_marke TYPE string.
     DATA mv_model TYPE string.
-    DATA mv_production_date TYPE i.
+    DATA mv_production_date TYPE d.
     DATA mv_horsepower TYPE i.
     DATA mv_price TYPE i.
 ENDCLASS.

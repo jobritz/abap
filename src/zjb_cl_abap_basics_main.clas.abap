@@ -155,15 +155,19 @@ CLASS zjb_cl_abap_basics_main IMPLEMENTATION.
     INSERT ls_car2 INTO TABLE lt_car.
     INSERT ls_car3 INTO TABLE lt_car.
 
-    out->write( lt_car ).
+*    out->write( lt_car ).
 
-    DATA lo_car1 TYPE REF TO ZJB_CL_CAR.
+    DATA lo_car1 TYPE REF TO zjb_cl_car.
     CREATE OBJECT lo_car1.
 
     DATA lo_car2 LIKE lo_car1.
     CREATE OBJECT lo_car2.
 
-
-
+    lo_car1->set_horsepower( 150 ).
+    lo_car1->set_price( 10000 ).
+    lo_car1->set_production_date( '20241010' ).
+    lo_car1->set_type( iv_marke = 'BMW'
+                       iv_model = 'iX' ).
+    out->write( lo_car1->display_attributes( ) ).
   ENDMETHOD.
 ENDCLASS.
